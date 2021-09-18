@@ -1,30 +1,95 @@
+
+
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
+    <div class = 'navItems'>
+    <router-link to="/">Home</router-link> 
     <router-link to="/about">About</router-link>
+    <router-link to="/components">Components</router-link>
+    </div>
   </div>
-  <router-view />
+  <router-view class = 'routerView' />
+  <Footer class = 'footer'/>
 </template>
 
+
+
+<script>
+import Footer from './components/Footer.vue'
+export default {
+  name: 'App',
+  components: {Footer}
+}
+</script>
+
+
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+body,html{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
+}
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
 }
 
-#nav {
-  padding: 30px;
+#app {
+
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: 5em 5em auto auto;
+  gap: 0.1em;
+  background-color:whitesmoke;
+  min-height: 100vh;
+  width: 100%;
+
+} 
+
+.routerView{
+  grid-column: 3/11;
+  grid-row-start: 3;
+  min-height: 70em;
+  background-color: lightcoral;
+}
+
+#nav{
+  display: grid;
+  position: sticky;
+  grid-template-columns: repeat(8,1fr);
+  grid-row: 2;
+  grid-column: 3/11;
+  top: 0;
+  background-color: whitesmoke;
+}
+
+.navItems {
+  align-self: start;
+  grid-column: 5/9;
+  grid-row: 2;
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+}
+
+.footer{
+  grid-row-start: 4;
+  grid-column: 3/11;
+  height: auto;
+  margin-top: 2em;
 }
 
 #nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  color: black
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: burlywood
 }
+
 </style>
