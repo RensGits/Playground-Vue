@@ -1,18 +1,16 @@
-
-
 <template>
   <div id="nav">
     <div class = 'navItems'>
     <router-link to="/">Home</router-link> 
     <router-link to="/about">About</router-link>
-    <router-link   to="/components">Components</router-link>
+    <router-link to="/components">Components</router-link>
+    <router-link to="/store">Store</router-link>
     </div>
   </div>
   <router-view @emitFromComponentsToApp = 'handleStyling' class = 'routerView' :class = "{dark: darkMode}"  />
   <Footer class = 'footer'/>
   
 </template>
-
 
 
 <script>
@@ -37,20 +35,18 @@ export default {
 </script>
 
 
-
 <style>
-
 body,html{
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none; /* for Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
   overflow-y: scroll; 
 }
 body::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
+    display: none; 
 }
 
 #app {
@@ -109,5 +105,4 @@ body::-webkit-scrollbar {
 #nav a.router-link-exact-active {
   color: burlywood
 }
-
 </style>

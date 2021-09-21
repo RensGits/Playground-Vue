@@ -40,38 +40,36 @@
             </button>
             <div class = "seaContainer">
             
-            <div class = "seaItem">
-            <div v-if: = "showSeaCreatures" v-for: = "seaCreature in seaCreatures" @click = 'setFavorite(seaCreature)'  >
-              
-              <p>{{seaCreature.name}}</p>
-              <img v-bind:src = seaCreature.img alt="" :class = "{seaAnimalPictures: true, favorite: seaCreature.favorite}"  >
-            </div>
-            <div v-else: v-for: = "seaCreature in seaCreatures" >
-              <p>{{seaCreature.name}}</p>
-            </div>
-            </div>
+              <div class = "seaItem">
+                <div v-if: = "showSeaCreatures" v-for: = "seaCreature in seaCreatures" @click = 'setFavorite(seaCreature)'  >
+                  <p>{{seaCreature.name}}</p>
+                  <img v-bind:src = seaCreature.img alt="" :class = "{seaAnimalPictures: true, favorite: seaCreature.favorite}"  >
+                </div>
+                <div v-else: v-for: = "seaCreature in seaCreatures" >
+                  <p>{{seaCreature.name}}</p>
+                </div>
+              </div>
 
-            <div class = "seaItem">
-            <div v-if: = "showSeaCreatures" >
-              <h3>My favorite sea creatures are: </h3>
-              <p>click on any to set as favorite</p>
-              
-                <p v-for: = "seaCreature in seaCreatures">
-                  <span v-if="seaCreature.favorite">- {{seaCreature.name}}</span>
-                  </p>
-              
+              <div class = "seaItem">
+                <div v-if: = "showSeaCreatures" >
+                  <h3>My favorite sea creatures are: </h3>
+                  <p>click on any to set as favorite</p>
+                    <p v-for: = "seaCreature in seaCreatures">
+                      <span v-if="seaCreature.favorite">- {{seaCreature.name}}</span>
+                    </p>
                 </div>
               </div>
             </div>
-          </section>
-          <section>
+        </section>
+
+        <section>
             <h3>Event emitting</h3>
             <Child @emitFromChildToComponents = 'emitFromComponentsToApp' >
               <h3>I am a child component</h3>
             </Child>
-          </section>
+        </section>
 
-          <section>
+        <section>
             <h3>Form / Two-way data-binding</h3>
             <div class = 'seaContainer'>
               <div>
@@ -96,15 +94,13 @@
                   </div>
                   <label>Add extra ingredients:</label>
                   <div class ='seaContainer'>
-                  <input type="text" @keyup="handleIngredients" v-model='ingredient'>
-                  
+                    <input type="text" @keyup="handleIngredients" v-model='ingredient'>
                   </div>
                   <div class = 'ingredientPicker' v-for="i in ingredients" :key = i >
                     <div class = 'ingredientPicker'>
                         <p>{{i}}</p>
                        <i @click="handleDeleteIngredient(i)" class = 'material-icons'>delete</i>
                     </div>
-                  
                   </div>
                   
                   <input type="submit">
@@ -119,11 +115,9 @@
                 </ul>
               </div>
             </div>
-          </section>
+        </section>
 
-
-    
-    </div>
+      </div>
 </template>
 
 <script>
@@ -232,7 +226,6 @@ export default {
 
   .components{
     height: auto;
-   
   }
 
   h1{
@@ -246,7 +239,6 @@ export default {
 
   h1,h2,h3,p,li,label{
     color:white;
-    
   }
 
   h3{
@@ -260,8 +252,6 @@ export default {
     padding-bottom: 0.5rem;
     padding-left: 3rem;
   }
-
-
 
   .mouseArea{
     height: 15em;

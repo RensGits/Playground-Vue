@@ -5,9 +5,6 @@
 
 <script>
 export default {
-    Data() {
-        
-    },
 
     methods: {
         handleEmit(){
@@ -15,6 +12,7 @@ export default {
         }
     }
 }
+
 </script>
 
 <style lang="postcss">

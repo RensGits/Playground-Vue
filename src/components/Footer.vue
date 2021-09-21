@@ -4,18 +4,17 @@
             <li><router-link to="/">Home</router-link> </li>
             <li><router-link to="/about">About</router-link></li>
             <li><router-link to="/components">Components</router-link></li>
-            
-           
-
         </ul>
     </div>
 </template>
 
+
 <script>
-export default {
-  name: 'Footer'
-}
+    export default {
+    name: 'Footer'
+    }
 </script>
+
 
 <style scoped>
     div{

@@ -5,6 +5,7 @@
   </div>
 </template>
 
+
 <script>
 
 export default {
@@ -12,17 +13,14 @@ export default {
 
 </script>
 
+
 <style scoped>
   .about{
     height: auto;
-   
   }
 
   h1,p{
     color:white;
     padding: 3rem;
   }
-
-
-  
 </style>

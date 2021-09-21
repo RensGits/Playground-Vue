@@ -8,3 +8,4 @@ Page holds logic for the following:
 - Events / emitting
 - Rendering arrays (v:for)
 - Two-way data-binding / form (v-model)
+- Vuex store
