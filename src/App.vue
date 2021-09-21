@@ -5,11 +5,12 @@
     <div class = 'navItems'>
     <router-link to="/">Home</router-link> 
     <router-link to="/about">About</router-link>
-    <router-link to="/components">Components</router-link>
+    <router-link   to="/components">Components</router-link>
     </div>
   </div>
-  <router-view class = 'routerView' />
+  <router-view @emitFromComponentsToApp = 'handleStyling' class = 'routerView' :class = "{dark: darkMode}"  />
   <Footer class = 'footer'/>
+  
 </template>
 
 
@@ -18,7 +19,20 @@
 import Footer from './components/Footer.vue'
 export default {
   name: 'App',
-  components: {Footer}
+  components: {Footer},
+  data(){
+    return{
+      darkMode: false
+    }
+  },
+
+  methods: {
+    handleStyling(){
+      console.log('event recieved by App')
+      this.darkMode = !this.darkMode
+    },
+   
+  }
 }
 </script>
 
@@ -56,6 +70,10 @@ body::-webkit-scrollbar {
   grid-row-start: 3;
   min-height: 70em;
   background-color: lightcoral;
+}
+
+.dark{
+  background-color: black;
 }
 
 #nav{

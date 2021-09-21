@@ -1,24 +1,10 @@
-# vueplayground
+I'll be using this repository for teaching myself Vue.js.
 
-## Project setup
-```
-npm install
-```
+Page holds logic for the following:
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Router
+- Dynamic class changing
+- Conditional rendering
+- Events / emitting
+- Rendering arrays (v:for)
+- Two-way data-binding / form (v-model)
